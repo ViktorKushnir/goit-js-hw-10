@@ -13,7 +13,7 @@ searchBoxEl.addEventListener('input', debounce(handleSearchBoxInput, DEBOUNCE_DE
 
 
 function handleSearchBoxInput(event) {
-    countryName = event.target.value.trim();
+  let  countryName = event.target.value.trim();
 
     if (!countryName) {
         clearInterface();
