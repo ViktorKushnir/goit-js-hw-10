@@ -5,9 +5,9 @@ const searchParams = new URLSearchParams({
 
 export const fetchCountries = countryName =>
   fetch(`${URL}${countryName}?${searchParams}`)
-  .then(Response=>{
-    if(!Response.ok){
-        throw new Error(Response.status);
+  .then(response=>{
+    if(!response.ok){
+        throw new Error(response.status);
     }
-    return Response.json()
+    return response.json()
   })
